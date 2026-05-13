@@ -1,0 +1,17 @@
+[project]
+name = "bayesian-risk-engine"
+version = "0.1.0"
+description = "Probabilistic risk modeling with calibration and uncertainty-first evaluation."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+

@@ -1,0 +1,17 @@
+{
+  "dataset_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data",
+  "rows_after_cleaning": 297,
+  "features": 13,
+  "train_rows": 207,
+  "test_rows": 90,
+  "event_rate": 0.4613,
+  "test_accuracy": 0.8,
+  "test_brier_score": 0.1467,
+  "test_expected_calibration_error": 0.1008,
+  "confusion_at_0_5": {
+    "tp": 29,
+    "fp": 4,
+    "tn": 43,
+    "fn": 14
+  }
+}

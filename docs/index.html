@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bayesian Risk Engine</title>
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; margin: 0; background: #f7f9fc; color: #172033; }
+    main { max-width: 960px; margin: 0 auto; padding: 48px 20px; }
+    h1 { font-size: 42px; margin-bottom: 8px; }
+    .lede { color: #435268; font-size: 18px; line-height: 1.55; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 28px 0; }
+    .metric { background: white; border: 1px solid #dfe6ef; border-radius: 8px; padding: 18px; }
+    .metric strong { display: block; font-size: 28px; color: #7c3aed; }
+    table { width: 100%; border-collapse: collapse; background: white; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e6ebf2; text-align: left; }
+    th { background: #f0ebff; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Bayesian Risk Engine</h1>
+  <p class="lede">A first risk-model baseline on the UCI Cleveland heart disease dataset. The current report establishes calibration and threshold diagnostics before adding Bayesian posterior uncertainty.</p>
+  <section class="grid">
+    <div class="metric"><span>Rows</span><strong>297</strong></div>
+    <div class="metric"><span>Event rate</span><strong>0.4613</strong></div>
+    <div class="metric"><span>Accuracy</span><strong>0.8</strong></div>
+    <div class="metric"><span>Brier score</span><strong>0.1467</strong></div>
+    <div class="metric"><span>ECE</span><strong>0.1008</strong></div>
+  </section>
+  <h2>Threshold Audit</h2>
+  <table><thead><tr><th>threshold</th><th>tp</th><th>fp</th><th>tn</th><th>fn</th></tr></thead><tbody><tr><td>0.3</td><td>33</td><td>6</td><td>41</td><td>10</td></tr><tr><td>0.4</td><td>31</td><td>5</td><td>42</td><td>12</td></tr><tr><td>0.5</td><td>29</td><td>4</td><td>43</td><td>14</td></tr><tr><td>0.6</td><td>29</td><td>4</td><td>43</td><td>14</td></tr><tr><td>0.7</td><td>23</td><td>3</td><td>44</td><td>20</td></tr></tbody></table>
+  <h2>Next Modeling Step</h2>
+  <p>Add Bayesian logistic regression with weakly informative priors, posterior predictive checks, and credible intervals around patient-level risk.</p>
+</main>
+</body>
+</html>
